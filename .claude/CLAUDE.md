@@ -1,7 +1,3 @@
----
-alwaysApply: true
----
-
 # Buffomat Lua addon for World of Warcraft
 
 - The addon is written in Lua with type specs.
@@ -13,4 +9,12 @@ alwaysApply: true
   - "Group Buffs" are mass buffs, a special type of regular single-target buffs, they apply to a party of players. Mass buffing a person in a party will buff all players in that party.
   - On the contrary: Paladin mass buffs apply to all players of targeted class (for example mass buffing a warrior will bless all warriors).
 
-- This addon supports Classic World of Warcraft from the vanilla up to Wrath of the Lich King. The code uses Ace3 libraries where possible: For user interface, for addon state management, for option windows, game event management, timer management and minimap icon.# Buffomat Lua addon for World of Warcraft
+- This addon supports Classic World of Warcraft from the vanilla up to Wrath of the Lich King. The code uses Ace3 libraries where possible: For user interface, for addon state management, for option windows, game event management, timer management and minimap icon.
+
+# Important
+
+* The source for WoW UI is conveniently downloaded from the game files and is located at     `F:\Projects\WowAddons\BlizzardInterfaceCode\`
+* Use skill `s-research` on questions related to wow and Lua programming topics.
+
+Always read `.claude/addon-dev.md`
+When need to search for code locations, consult with `.claude/code-index.md`
