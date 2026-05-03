@@ -10,7 +10,8 @@ import subprocess
 import sys
 import zipfile
 
-VERSION = "2026.3.0"  # year.month.build_num
+# Version bumping rules: Begin each new month with <year>.<month>.0 and increase by 1 with every new bump.
+VERSION = "2026.5.0"  # year.month.build_num
 
 ADDON_NAME_CLASSIC = "BuffomatClassic"  # Directory and zip name
 ADDON_TITLE_CLASSIC = "Buffomat Classic"  # Title field in TOC
