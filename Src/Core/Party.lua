@@ -272,7 +272,13 @@ function partyClass:GetRaidMembers(invalidGroups)
       if name then
         name = toolboxModule:Split(name, "-")[1]
         nameGroupMap[name] = subgroup
-        nameRoleMap[name] = role
+        -- Prefer modern combatRole ("TANK"/"HEALER"/"DAMAGER") when available;
+        -- fall back to legacy MAINTANK/MAINASSIST flag set by raid leader.
+        if combatRole == "TANK" or combatRole == "HEALER" or combatRole == "DAMAGER" then
+          nameRoleMap[name] = combatRole
+        else
+          nameRoleMap[name] = role
+        end
       end
 
       local partyMember = unitCacheModule:GetUnit("raid" .. raidIndex, nameGroupMap, nameRoleMap, nil)
